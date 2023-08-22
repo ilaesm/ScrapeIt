@@ -9,6 +9,15 @@ import pandas as pd
 import json
 
 st.set_page_config(layout='wide', page_title="ScrapeIt AI", page_icon=":computer:")
+col1, col2 = st.columns(2)
+with col1:
+    with open("logo.svg", "r") as file:
+        svg_logo = file.read()
+    st.markdown(svg_logo, unsafe_allow_html=True)
+st.subheader("AI-powered Web Scraping")
+st.divider()
+
+
 
 
 url = st.sidebar.text_input('Enter the URL you want to scrape:')
